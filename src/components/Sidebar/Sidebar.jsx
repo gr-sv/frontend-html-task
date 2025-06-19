@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const routes = [
     { title: 'Home', icon: 'fas-solid fa-house', path: '/' },
@@ -17,6 +18,8 @@ const bottomRoutes = [
     { title: 'Settings', icon: 'sliders', path: '/settings' },
     { title: 'Support', icon: 'phone-volume', path: '/support' },
 ];
+
+
 
 const Sidebar = (props) => {
     const { color } = props;
