@@ -16,8 +16,17 @@ const bottomRoutes = [
     { title: 'Support', icon: 'phone-volume', path: '/support' },
 ];
 
-const StyledRoutesWrapper = styled.div`
+const AllRoutesWrapper = styled.div`
 	width: 100%;
+	padding-top: 1.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-grow: 1;
+`;
+
+const StyledRoutesWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -54,7 +63,7 @@ const Routes = () => {
     };
 
 	return (
-		<>
+		<AllRoutesWrapper>
 			<StyledRoutesWrapper>
 				{
 					routes.map(route => (
@@ -86,7 +95,7 @@ const Routes = () => {
 					))
 				}
 			</StyledRoutesWrapper>
-		</>
+		</AllRoutesWrapper>
 	)
 }
 

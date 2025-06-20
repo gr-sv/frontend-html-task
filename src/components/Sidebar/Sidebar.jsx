@@ -9,6 +9,7 @@ import Routes from '../Routes/Routes';
 //Sidebar
 const StyledSidebar = styled.div`
 	width: max-content;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -25,15 +26,16 @@ const StyledSidebar = styled.div`
 //Logo
 const StyledLogoWrapper = styled.div`
 	width: 100%;
+	padding-right: 4em;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	
+	gap: 0.4em;
 `;
 
 const StyledLogo = styled.img`
-	width: 2.5em;
+	width: 2em;
 	height: auto;
 `;
 
