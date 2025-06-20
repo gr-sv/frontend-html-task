@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+// import Title from '../Title/Title';
 
 const routes = [
     { title: 'Home', icon: 'fas-solid fa-house', path: '/' },
@@ -19,7 +20,34 @@ const bottomRoutes = [
     { title: 'Support', icon: 'phone-volume', path: '/support' },
 ];
 
+//Styled components - Logo
+const StyledLogoWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+`;
 
+const StyledLogo = styled.img`
+	width: 2.5em;
+	height: auto;
+`;
+
+const StyledTitle = styled.h1`
+	color: var(--color-text-logo-light-default);
+`;
+
+const StyledToggle = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 2em;
+	height: 2em;
+	padding: 10px;
+	color: var(--color-text-light-default);
+	background: transparent;
+	border-radius: 100%;
+`;
 
 const Sidebar = (props) => {
     const { color } = props;
@@ -34,15 +62,23 @@ const Sidebar = (props) => {
         setIsOpened(v => !v);
     };
 
+
+
     return (
         <div className={ containerClassnames }>
-            <div>
-                <img src={ logo } alt="TensorFlow logo"/>
-                <span>TensorFlow</span>
-                <div onClick={ toggleSidebar }>
+
+			{/* <Title /> */}
+
+            <StyledLogoWrapper>
+                <StyledLogo src={ logo } alt="TensorFlow logo"/>
+
+                <StyledTitle>TensorFlow</StyledTitle>
+
+                <StyledToggle onClick={ toggleSidebar }>
                     <FontAwesomeIcon icon={ isOpened ? 'angle-left' : 'angle-right' }/>
-                </div>
-            </div>
+                </StyledToggle>
+            </StyledLogoWrapper>
+
             <div>
                 {
                     routes.map(route => (
