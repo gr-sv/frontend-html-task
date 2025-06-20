@@ -20,11 +20,27 @@ const bottomRoutes = [
     { title: 'Support', icon: 'phone-volume', path: '/support' },
 ];
 
-//Styled components - Logo
+//Sidebar
+const StyledSidebar = styled.div`
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 20px;
+	color: var(--color-text-light-default);
+	background-color: var(--color-sidebar-background-light-default);
+	border-radius: 15px;
+	outline: 2px solid var(--color-sidebar-background-light-default);
+	outline-offset: 2px;
+`;
+
+//Logo
 const StyledLogoWrapper = styled.div`
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 `;
 
@@ -45,9 +61,13 @@ const StyledToggle = styled.div`
 	height: 2em;
 	padding: 10px;
 	color: var(--color-text-light-default);
-	background: transparent;
+	background: #e2e8f0;
 	border-radius: 100%;
 `;
+
+
+//routes
+
 
 const Sidebar = (props) => {
     const { color } = props;
@@ -62,10 +82,8 @@ const Sidebar = (props) => {
         setIsOpened(v => !v);
     };
 
-
-
     return (
-        <div className={ containerClassnames }>
+        <StyledSidebar className={ containerClassnames }>
 
 			{/* <Title /> */}
 
@@ -109,7 +127,7 @@ const Sidebar = (props) => {
                     ))
                 }
             </div>
-        </div>
+        </StyledSidebar>
     );
 };
 
