@@ -12,14 +12,14 @@
 
     // light
     --color-sidebar-background-light-default: #fff;
-    --color-sidebar-background-light-hover: #f0f2ff;
+    --color-sidebar-background-light-hover: #e2e8f0;
     --color-sidebar-background-light-active: #f0f2ff;
     --color-text-light-default: #97a5b9;
     --color-text-light-hover: #091b31;
     --color-text-light-active: #0000b5;
     --color-text-logo-light-default: #0000b5;
     --color-button-background-light-default: #fff;
-    --color-button-background-light-active: #e2e8f0;
+    --color-button-background-light-active: #f0f2ff;
 }
 
 * {
@@ -29,10 +29,14 @@
 }
 
 html {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
-  padding: 20px;
-  background-color: #e2e8f0;
-  color: rgba(255, 255, 255, 0.87);
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	padding: 100px;
+	background-color: #e2e8f0;
+	color: rgba(255, 255, 255, 0.87);
+}
+
+html, body {
+	height: 100%;
 }
