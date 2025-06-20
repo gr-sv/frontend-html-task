@@ -57,6 +57,14 @@ const StyledToggle = styled.div`
 	position: absolute;
 	right: -7%;
 	z-index: 10;
+
+	&:hover {
+		color: var(--color-text-light-hover);
+	}
+
+	&:active {
+		color: var(--color-text-light-active);
+	}
 `;
 
 const Sidebar = (props) => {
