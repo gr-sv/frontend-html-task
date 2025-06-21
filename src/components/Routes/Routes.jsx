@@ -80,7 +80,7 @@ const Routes = () => {
 				}
 			</StyledRoutesWrapper>
 
-			 <StyledRoutesWrapper>
+			<StyledRoutesWrapper>
 				{
 					bottomRoutes.map(route => (
 						<StyledRoute
