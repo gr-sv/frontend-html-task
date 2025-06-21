@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import classnames from 'classnames';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import logo from '../../assets/logo.png';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Logo from '../Logo/Logo';
