@@ -11,8 +11,11 @@ import {
 	StyledToggle,
 	AllRoutesWrapper,
 	StyledRoutesWrapper,
-	StyledRoute
+	StyledRoute,
+	StyledButtonThemeWrapper,
+	StyledButtonTheme
 } from './Sidebar.styles'
+import { ThemeProvider } from 'styled-components';
 
 const routes = [
     { title: 'Home', icon: 'fas-solid fa-house', path: '/' },
@@ -86,6 +89,14 @@ const Sidebar = (props) => {
 					}
 				</StyledRoutesWrapper>
 			</AllRoutesWrapper>
+
+			<StyledButtonThemeWrapper>
+					
+					<StyledButtonTheme>
+						<FontAwesomeIcon icon={ "fa-solid fa-circle-half-stroke" }/>
+						<span>Theme Button</span>
+					</StyledButtonTheme>
+			</StyledButtonThemeWrapper>
         </StyledSidebar>
     );
 };

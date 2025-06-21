@@ -3,12 +3,13 @@ import styled from 'styled-components';
 //Sidebar
 export const StyledSidebar = styled.div`
 	width: max-content;
+	min-height: max-content;
 	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	padding: 1.5em;
+	padding: 1.5em 0;
 	color: var(--color-text-light-default);
 	background-color: var(--color-sidebar-background-light-default);
 	border-radius: 1em;
@@ -20,7 +21,7 @@ export const StyledSidebar = styled.div`
 //Logo
 export const StyledLogoWrapper = styled.div`
 	width: 100%;
-	padding-right: 4em;
+	padding: 0 4.5em 0 1.5em;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -64,7 +65,7 @@ export const StyledToggle = styled.div`
 //Routes
 export const AllRoutesWrapper = styled.div`
 	width: 100%;
-	padding-top: 1.5em;
+	padding: 1.5em 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -82,6 +83,7 @@ export const StyledRoutesWrapper = styled.div`
 
 export const StyledRoute = styled.div`
 	padding: 0.7em;
+	margin: 0 1.5em;
 	color: var(--color-text-light-default);
 	background-color: var(--color-sidebar-background-light-default);
 	border-radius: 1em;
@@ -101,4 +103,14 @@ export const StyledRoute = styled.div`
 		color: var(--color-text-light-active);
 		background-color: var(--color-button-background-light-active);
 	}
+`;
+
+export const StyledButtonThemeWrapper = styled(StyledRoutesWrapper)`
+	width: 100%;
+	padding-top: 1em;
+	border-top: 0.13em solid var(--color-sidebar-background-light-hover);
+`;
+
+export const StyledButtonTheme = styled(StyledRoute)`
+
 `;
