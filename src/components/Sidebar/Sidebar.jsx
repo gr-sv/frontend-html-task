@@ -15,7 +15,6 @@ import {
 	StyledButtonThemeWrapper,
 	StyledButtonTheme
 } from './Sidebar.styles'
-import { ThemeProvider } from 'styled-components';
 
 const routes = [
     { title: 'Home', icon: 'fas-solid fa-house', path: '/' },
@@ -34,7 +33,6 @@ const bottomRoutes = [
 const Sidebar = (props) => {
     const { color } = props;
     const [isOpened, setIsOpened] = useState(true);
-    const containerClassnames = classnames('sidebar', { opened: isOpened });
 
     const toggleSidebar = () => {
         setIsOpened(v => !v);
@@ -45,11 +43,11 @@ const Sidebar = (props) => {
     };
 
     return (
-        <StyledSidebar className={ containerClassnames }>
-            <StyledLogoWrapper>
+        <StyledSidebar isOpened={isOpened}>
+            <StyledLogoWrapper isOpened={isOpened}>
                 <StyledLogo src={ logo } alt="TensorFlow logo"/>
 
-                <StyledTitle>TensorFlow</StyledTitle>
+                <StyledTitle isOpened={isOpened}>TensorFlow</StyledTitle>
 
                 <StyledToggle onClick={ toggleSidebar }>
                     <FontAwesomeIcon icon={ isOpened ? 'angle-left' : 'angle-right' }/>

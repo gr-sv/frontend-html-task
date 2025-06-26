@@ -22,9 +22,10 @@ export const StyledSidebar = styled.div`
 export const StyledLogoWrapper = styled.div`
 	width: 100%;
 	padding: 0 4.5em 0 1.5em;
+	padding-right: ${({ isOpened }) => (isOpened ? '4.5em' : '1.5em')};
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: ${({ isOpened }) => (isOpened ? 'flex-start' : 'center') };
 	align-items: center;
 	gap: 0.4em;
 `;
@@ -35,6 +36,7 @@ export const StyledLogo = styled.img`
 `;
 
 export const StyledTitle = styled.h1`
+	display: ${({ isOpened }) => (isOpened ? 'block' : 'none')};
 	font-size: 1.5em;
 	color: var(--color-text-logo-light-default);
 `;
