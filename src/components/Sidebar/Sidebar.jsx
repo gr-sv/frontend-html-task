@@ -12,6 +12,7 @@ import {
 	AllRoutesWrapper,
 	StyledRoutesWrapper,
 	StyledRoute,
+	StyledItem,
 	StyledButtonThemeWrapper,
 	StyledButtonTheme
 } from './Sidebar.styles'
@@ -65,7 +66,7 @@ const Sidebar = (props) => {
 								}}
 							>
 								<FontAwesomeIcon icon={ route.icon }/>
-								<span>{ route.title }</span>
+								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
 							</StyledRoute>
 						))
 					}
@@ -81,7 +82,7 @@ const Sidebar = (props) => {
 								}}
 							>
 								<FontAwesomeIcon icon={ route.icon }/>
-								<span>{ route.title }</span>
+								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
 							</StyledRoute>
 						))
 					}
@@ -92,7 +93,7 @@ const Sidebar = (props) => {
 					
 					<StyledButtonTheme>
 						<FontAwesomeIcon icon={ "fa-solid fa-circle-half-stroke" }/>
-						<span>Theme Button</span>
+						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>
 					</StyledButtonTheme>
 			</StyledButtonThemeWrapper>
         </StyledSidebar>

@@ -107,6 +107,10 @@ export const StyledRoute = styled.div`
 	}
 `;
 
+export const StyledItem = styled.span`
+	display: ${({ isOpened }) => (isOpened ? 'block' : 'none')};
+`;
+
 export const StyledButtonThemeWrapper = styled(StyledRoutesWrapper)`
 	width: 100%;
 	padding-top: 1em;
