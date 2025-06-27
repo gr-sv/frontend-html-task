@@ -64,6 +64,7 @@ const Sidebar = (props) => {
 								onClick={() => {
 									goToRoute(route.path);
 								}}
+								isOpened={isOpened}
 							>
 								<FontAwesomeIcon icon={ route.icon }/>
 								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
@@ -80,6 +81,7 @@ const Sidebar = (props) => {
 								onClick={() => {
 									goToRoute(route.path);
 								}}
+								isOpened={isOpened}
 							>
 								<FontAwesomeIcon icon={ route.icon }/>
 								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
@@ -90,7 +92,6 @@ const Sidebar = (props) => {
 			</AllRoutesWrapper>
 
 			<StyledButtonThemeWrapper>
-					
 					<StyledButtonTheme>
 						<FontAwesomeIcon icon={ "fa-solid fa-circle-half-stroke" }/>
 						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>

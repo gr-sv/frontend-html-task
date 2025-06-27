@@ -27,7 +27,7 @@ export const StyledLogoWrapper = styled.div`
 	flex-direction: row;
 	justify-content: ${({ isOpened }) => (isOpened ? 'flex-start' : 'center') };
 	align-items: center;
-	gap: 0.4em;
+	gap: ${({ isOpened }) => (isOpened ? '0.4em' : '0')};
 `;
 
 export const StyledLogo = styled.img`
@@ -91,9 +91,9 @@ export const StyledRoute = styled.div`
 	border-radius: 1em;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: ${({ isOpened }) => (isOpened ? 'flex-start' : 'center')};
 	align-items: center;
-	gap: 0.6em;
+	gap: ${({ isOpened }) => (isOpened) ? '0.6em' : '0'};
 	transition: 0.3s;
 
 	&:hover {
