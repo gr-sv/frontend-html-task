@@ -29,11 +29,13 @@ export const StyledLogoWrapper = styled.div`
 	justify-content: ${({ isOpened }) => (isOpened ? 'flex-start' : 'center') };
 	align-items: center;
 	gap: ${({ isOpened }) => (isOpened ? '0.4em' : '0')};
+	transition: .4s;
 `;
 
 export const StyledLogo = styled.img`
 	width: 2em;
 	height: auto;
+	padding: .125em 0;
 `;
 
 export const StyledTitle = styled.h1`
@@ -50,11 +52,14 @@ export const StyledToggle = styled.div`
 	height: 2em;
 	padding: 0.63em;
 	color: var(--color-text-light-default);
-	background: ${({ isOpened }) => (isOpened ? '#e2e8f0' : '#fff')};
+	background-color: ${({ isOpened }) => (isOpened ? '#e2e8f0' : '#fff')};
 	border-radius: 100%;
 	position: absolute;
 	right: ${({ isOpened }) => (isOpened ? '-7%' : '-55%')};
 	z-index: 10;
+	transition:
+		color .3s,
+		background-color .3s;
 
 	&:hover {
 		color: var(--color-text-light-hover);
@@ -86,7 +91,7 @@ export const StyledRoutesWrapper = styled.div`
 
 export const StyledRoute = styled.div`
 	padding: 0.7em;
-	margin: 0 1.5em;
+	margin: ${({ isOpened }) => (isOpened ? '0 1.5em' : '0 1.2em')};
 	color: var(--color-text-light-default);
 	background-color: var(--color-sidebar-background-light-default);
 	border-radius: 1em;
@@ -95,7 +100,7 @@ export const StyledRoute = styled.div`
 	justify-content: ${({ isOpened }) => (isOpened ? 'flex-start' : 'center')};
 	align-items: center;
 	gap: ${({ isOpened }) => (isOpened) ? '0.6em' : '0'};
-	transition: 0.3s;
+	transition: .3s;
 
 	&:hover {
 		color: var(--color-text-light-hover);
