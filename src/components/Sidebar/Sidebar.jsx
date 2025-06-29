@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
 import PropTypes from 'prop-types';
@@ -12,6 +11,7 @@ import {
 	AllRoutesWrapper,
 	StyledRoutesWrapper,
 	StyledRoute,
+	StyledIcon,
 	StyledItem,
 	StyledButtonThemeWrapper,
 	StyledButtonTheme
@@ -66,7 +66,7 @@ const Sidebar = (props) => {
 								}}
 								isOpened={isOpened}
 							>
-								<FontAwesomeIcon icon={ route.icon }/>
+								<StyledIcon icon={ route.icon }/>
 								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
 							</StyledRoute>
 						))
@@ -83,7 +83,7 @@ const Sidebar = (props) => {
 								}}
 								isOpened={isOpened}
 							>
-								<FontAwesomeIcon icon={ route.icon }/>
+								<StyledIcon icon={ route.icon }/>
 								<StyledItem isOpened={isOpened}>{ route.title }</StyledItem>
 							</StyledRoute>
 						))
@@ -92,8 +92,8 @@ const Sidebar = (props) => {
 			</AllRoutesWrapper>
 
 			<StyledButtonThemeWrapper>
-					<StyledButtonTheme>
-						<FontAwesomeIcon icon={ "fa-solid fa-circle-half-stroke" }/>
+					<StyledButtonTheme isOpened={isOpened}>
+						<StyledIcon icon={ "fa-solid fa-circle-half-stroke" }/>
 						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>
 					</StyledButtonTheme>
 			</StyledButtonThemeWrapper>

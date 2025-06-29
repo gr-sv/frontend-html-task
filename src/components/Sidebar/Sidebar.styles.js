@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //Sidebar
 export const StyledSidebar = styled.div`
@@ -105,6 +106,10 @@ export const StyledRoute = styled.div`
 		color: var(--color-text-light-active);
 		background-color: var(--color-button-background-light-active);
 	}
+`;
+
+export const StyledIcon = styled(FontAwesomeIcon)`
+	padding: 0.25em 0;
 `;
 
 export const StyledItem = styled.span`
