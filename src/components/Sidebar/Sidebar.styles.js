@@ -50,10 +50,10 @@ export const StyledToggle = styled.div`
 	height: 2em;
 	padding: 0.63em;
 	color: var(--color-text-light-default);
-	background: #e2e8f0;
+	background: ${({ isOpened }) => (isOpened ? '#e2e8f0' : '#fff')};
 	border-radius: 100%;
 	position: absolute;
-	right: -7%;
+	right: ${({ isOpened }) => (isOpened ? '-7%' : '-55%')};
 	z-index: 10;
 
 	&:hover {

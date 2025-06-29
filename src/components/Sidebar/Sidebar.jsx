@@ -50,7 +50,7 @@ const Sidebar = (props) => {
 
                 <StyledTitle isOpened={isOpened}>TensorFlow</StyledTitle>
 
-                <StyledToggle onClick={ toggleSidebar }>
+                <StyledToggle onClick={ toggleSidebar } isOpened={isOpened}>
                     <FontAwesomeIcon icon={ isOpened ? 'angle-left' : 'angle-right' }/>
                 </StyledToggle>
             </StyledLogoWrapper>
