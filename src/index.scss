@@ -2,14 +2,15 @@
     // dark
 	--color-background-dark-default: #232e3f;
     --color-sidebar-background-dark-default: #202127;
-    --color-sidebar-background-dark-hover: #2D2E34;
-    --color-sidebar-background-dark-active: #393A3F;
+    --color-sidebar-background-dark-hover: #393A3F;
+    --color-sidebar-background-dark-active: #2D2E34;
     --color-text-dark-default: #f0f2ff;
     --color-text-dark-hover: #f0f2ff;
     --color-text-dark-active: #f0f2ff;
     --color-text-logo-dark-default: #3B82F6;
     --color-button-background-dark-default: #202127;
-    --color-button-background-dark-active: #4B5966;
+	--color-button-background-dark-hover: #393A3F;
+    --color-button-background-dark-active: #2D2E34;
 
     // light
 	--color-background-light-default: #e2e8f0;
@@ -21,6 +22,7 @@
     --color-text-light-active: #0000b5;
     --color-text-logo-light-default: #0000b5;
     --color-button-background-light-default: #fff;
+	--color-button-background-light-hover: #e2e8f0;
     --color-button-background-light-active: #f0f2ff;
 }
 
