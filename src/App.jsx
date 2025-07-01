@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components'
 library.add(fas);
 
 const StyledAppWrapper = styled.div`
+	height: 100vh;
 	padding: 70px;
 	transition: .3s;
 

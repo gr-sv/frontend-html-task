@@ -13,8 +13,7 @@ import {
 	StyledRoute,
 	StyledIcon,
 	StyledItem,
-	StyledButtonThemeWrapper,
-	StyledButtonTheme
+	StyledButtonThemeWrapper
 } from './Sidebar.styles'
 
 const routes = [
@@ -60,6 +59,7 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
 						routes.map(route => (
 							<StyledRoute
 								key={ route.title }
+								color={color}
 								onClick={() => {
 									goToRoute(route.path);
 								}}
@@ -77,6 +77,7 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
 						bottomRoutes.map(route => (
 							<StyledRoute
 								key={ route.title }
+								color={color}
 								onClick={() => {
 									goToRoute(route.path);
 								}}
@@ -90,14 +91,15 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
 				</StyledRoutesWrapper>
 			</AllRoutesWrapper>
 
-			<StyledButtonThemeWrapper>
-					<StyledButtonTheme
+			<StyledButtonThemeWrapper color={color}>
+					<StyledRoute
 						isOpened={isOpened}
 						onClick={onToggleTheme}
+						color={color}
 					>
 						<StyledIcon icon={ "fa-solid fa-circle-half-stroke" }/>
 						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>
-					</StyledButtonTheme>
+					</StyledRoute>
 			</StyledButtonThemeWrapper>
         </StyledSidebar>
     );

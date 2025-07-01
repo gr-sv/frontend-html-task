@@ -132,8 +132,6 @@ export const StyledRoutesWrapper = styled.div`
 export const StyledRoute = styled.div`
 	padding: 0.7em;
 	margin: ${({ isOpened }) => (isOpened ? '0 1.5em' : '0 1.2em')};
-	color: var(--color-text-light-default);
-	background-color: var(--color-sidebar-background-light-default);
 	border-radius: 1em;
 	display: flex;
 	flex-direction: row;
@@ -142,14 +140,32 @@ export const StyledRoute = styled.div`
 	gap: ${({ isOpened }) => (isOpened) ? '0.6em' : '0'};
 	transition: .3s;
 
-	&:hover {
-		color: var(--color-text-light-hover);
-		background-color: var(--color-sidebar-background-light-hover);
-	}
+	${({ color }) => color === 'dark' ? css`
+		color: var(--color-text-dark-default);
+		background-color: var(--color-sidebar-background-dark-default);
+		
+		&:hover {
+			color: var(--color-text-dark-hover);
+			background-color: var(--color-button-background-dark-hover);
+		}
 
-	&:active {
-		color: var(--color-text-light-active);
-		background-color: var(--color-button-background-light-active);
+		&:active {
+			color: var(--color-text-dark-active);
+			background-color: var(--color-sidebar-background-dark-active);
+		}`
+		: css`
+		color: var(--color-text-light-default);
+		background-color: var(--color-button-background-light-default);
+
+		&:hover {
+			color: var(--color-text-light-hover);
+			background-color: var(--color-button-background-light-hover);
+		}
+
+		&:active {
+			color: var(--color-text-light-active);
+			background-color: var(--color-button-background-light-active);
+		}`
 	}
 `;
 
@@ -164,9 +180,12 @@ export const StyledItem = styled.span`
 export const StyledButtonThemeWrapper = styled(StyledRoutesWrapper)`
 	width: 100%;
 	padding-top: 1em;
-	border-top: 0.13em solid var(--color-sidebar-background-light-hover);
-`;
+	border-top: 0.13em solid;
+	transition: .3s;
 
-export const StyledButtonTheme = styled(StyledRoute)`
-
+	${({ color }) => color === 'dark' ? css`
+		border-color: var(--color-background-dark-default)`
+		: css`
+		border-color: var(--color-background-light-default)`
+	}
 `;
