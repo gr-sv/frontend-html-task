@@ -97,8 +97,10 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
 						onClick={onToggleTheme}
 						color={color}
 					>
-						<StyledIcon icon={ "fa-solid fa-circle-half-stroke" }/>
-						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>
+						<StyledIcon icon={ (color === 'light') ? 'fa-solid fa-moon' : 'fa-solid fa-sun' } />
+						<StyledItem isOpened={isOpened}>
+							{ (color === 'light') ? 'Dark theme' : 'Light theme' }
+						</StyledItem>
 					</StyledRoute>
 			</StyledButtonThemeWrapper>
         </StyledSidebar>
