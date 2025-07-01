@@ -11,6 +11,7 @@
     --color-button-background-dark-active: #4B5966;
 
     // light
+	--color-background-light-default: #e2e8f0;
     --color-sidebar-background-light-default: #fff;
     --color-sidebar-background-light-hover: #e2e8f0;
     --color-sidebar-background-light-active: #f0f2ff;
@@ -32,9 +33,6 @@ html {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	line-height: 1.5;
-	padding: 70px;
-	background-color: #e2e8f0;
-	color: rgba(255, 255, 255, 0.87);
 }
 
 html, body {
