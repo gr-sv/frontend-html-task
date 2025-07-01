@@ -31,8 +31,7 @@ const bottomRoutes = [
     { title: 'Support', icon: 'phone-volume', path: '/support' },
 ];
 
-const Sidebar = (props) => {
-    const { color } = props;
+const Sidebar = ({ color = 'light', onToggleTheme }) => {
     const [isOpened, setIsOpened] = useState(true);
 
     const toggleSidebar = () => {
@@ -92,7 +91,10 @@ const Sidebar = (props) => {
 			</AllRoutesWrapper>
 
 			<StyledButtonThemeWrapper>
-					<StyledButtonTheme isOpened={isOpened}>
+					<StyledButtonTheme
+						isOpened={isOpened}
+						onClick={onToggleTheme}
+					>
 						<StyledIcon icon={ "fa-solid fa-circle-half-stroke" }/>
 						<StyledItem isOpened={isOpened}>Theme Button</StyledItem>
 					</StyledButtonTheme>
