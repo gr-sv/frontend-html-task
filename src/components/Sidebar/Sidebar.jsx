@@ -47,9 +47,9 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
             <StyledLogoWrapper isOpened={isOpened}>
                 <StyledLogo src={ logo } alt="TensorFlow logo"/>
 
-                <StyledTitle isOpened={isOpened}>TensorFlow</StyledTitle>
+                <StyledTitle color={color} isOpened={isOpened}>TensorFlow</StyledTitle>
 
-                <StyledToggle onClick={ toggleSidebar } isOpened={isOpened}>
+                <StyledToggle color={color} onClick={ toggleSidebar } isOpened={isOpened}>
                     <FontAwesomeIcon icon={ isOpened ? 'angle-left' : 'angle-right' }/>
                 </StyledToggle>
             </StyledLogoWrapper>

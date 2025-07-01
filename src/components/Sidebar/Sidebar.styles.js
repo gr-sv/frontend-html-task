@@ -22,13 +22,12 @@ export const StyledSidebar = styled.div`
 	${({ color }) => color === 'dark' ? css`
 		color: var(--color-text-dark-default);
 		background-color: var(--color-sidebar-background-dark-default);
-		outline-color: var(--color-sidebar-background-dark-default);
-		`
+		outline-color: var(--color-sidebar-background-dark-default);`
 		: css`
 		color: var(--color-text-light-default);
 		background-color: var(--color-sidebar-background-light-default);
-		outline-color: var(--color-sidebar-background-light-default);
-	`}
+		outline-color: var(--color-sidebar-background-light-default);`
+	}
 `;
 
 //Logo
@@ -54,6 +53,12 @@ export const StyledTitle = styled.h1`
 	display: ${({ isOpened }) => (isOpened ? 'block' : 'none')};
 	font-size: 1.5em;
 	color: var(--color-text-logo-light-default);
+
+	${({ color }) => color === 'dark' ? css`
+		color: var(--color-text-logo-dark-default);`
+		: css`
+		color: var(--color-text-logo-light-default);`
+	}
 `;
 
 export const StyledToggle = styled.div`
@@ -63,8 +68,6 @@ export const StyledToggle = styled.div`
 	width: 2em;
 	height: 2em;
 	padding: 0.63em;
-	color: var(--color-text-light-default);
-	background-color: ${({ isOpened }) => (isOpened ? '#e2e8f0' : '#fff')};
 	border-radius: 100%;
 	position: absolute;
 	right: ${({ isOpened }) => (isOpened ? '-7%' : '-55%')};
@@ -73,12 +76,36 @@ export const StyledToggle = styled.div`
 		color .3s,
 		background-color .3s;
 
-	&:hover {
-		color: var(--color-text-light-hover);
-	}
+	${({ color }) => color === 'dark' ? css`
+		color: var(--color-text-dark-default);
+		background-color: ${({ isOpened }) => (isOpened ? css`
+			var(--color-background-dark-default)`
+			: css`
+			var(--color-sidebar-background-dark-default)`
+		)};
+		
+		&:hover {
+			color: var(--color-text-dark-hover);
+		}
 
-	&:active {
-		color: var(--color-text-light-active);
+		&:active {
+			color: var(--color-text-dark-active);
+		}`
+		: css`
+		color: var(--color-text-light-default);
+		background-color: ${({ isOpened }) => (isOpened ? css`
+			var(--color-background-light-default)`
+			: css`
+			var(--color-sidebar-background-light-default)`
+		)};
+
+		&:hover {
+			color: var(--color-text-light-hover);
+		}
+
+		&:active {
+			color: var(--color-text-light-active);
+		}`
 	}
 `;
 

@@ -15,8 +15,8 @@ const StyledAppWrapper = styled.div`
 		color: var(--color-text-dark-default);`
 		: css`
 		background-color: var(--color-background-light-default);
-		color: var(--color-text-light-default);
-	`}
+		color: var(--color-text-light-default);`
+	}
 `;
 
 const App = () => {
