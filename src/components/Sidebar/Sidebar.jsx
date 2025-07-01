@@ -43,7 +43,7 @@ const Sidebar = ({ color = 'light', onToggleTheme }) => {
     };
 
     return (
-        <StyledSidebar isOpened={isOpened}>
+        <StyledSidebar color={color} isOpened={isOpened}>
             <StyledLogoWrapper isOpened={isOpened}>
                 <StyledLogo src={ logo } alt="TensorFlow logo"/>
 

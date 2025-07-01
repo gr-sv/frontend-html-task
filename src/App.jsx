@@ -10,7 +10,7 @@ const StyledAppWrapper = styled.div`
 	padding: 70px;
 	transition: .3s;
 
-	${({ color }) => color =='dark' ? css`
+	${({ color }) => color ==='dark' ? css`
 		background-color: var(--color-background-dark-default);
 		color: var(--color-text-dark-default);`
 		: css`

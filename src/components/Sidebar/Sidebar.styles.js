@@ -14,9 +14,21 @@ export const StyledSidebar = styled.div`
 	color: var(--color-text-light-default);
 	background-color: var(--color-sidebar-background-light-default);
 	border-radius: 1em;
-	outline: 0.13em solid var(--color-sidebar-background-light-default);
+	outline: 0.13em solid;
 	outline-offset: 0.13em;
 	position: relative;
+	transition: .3s;
+
+	${({ color }) => color === 'dark' ? css`
+		color: var(--color-text-dark-default);
+		background-color: var(--color-sidebar-background-dark-default);
+		outline-color: var(--color-sidebar-background-dark-default);
+		`
+		: css`
+		color: var(--color-text-light-default);
+		background-color: var(--color-sidebar-background-light-default);
+		outline-color: var(--color-sidebar-background-light-default);
+	`}
 `;
 
 //Logo
@@ -79,6 +91,7 @@ export const AllRoutesWrapper = styled.div`
 	justify-content: space-between;
 	align-items: stretch;
 	flex-grow: 1;
+	gap: .3em;
 `;
 
 export const StyledRoutesWrapper = styled.div`
